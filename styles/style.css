@@ -69,6 +69,12 @@ body{
 	width: 90vw;
 	max-width: var(--fixed-width);
   }
+  
+  main {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+  }
 
 
 
