@@ -1,4 +1,9 @@
 
+:root{
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--radius: 0.5rem;
+	--max-width: 1170px;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,9 +53,6 @@ body{
 
 
 .opening-article{
-	position: fixed;
-  	top: 0;
-  	left: 0;
 	align-content: center;
 	background-color: white;
 }
@@ -58,6 +60,15 @@ body{
 	text-shadow: 5px;
 	text-decoration: underline;
 }
+.banner {
+	background: white;
+	padding: 4rem 0;
+	border-radius: var(--radius);
+	box-shadow: var(--light-shadow);
+	text-align: center;
+	width: 90vw;
+	max-width: var(--fixed-width);
+  }
 
 
 
