@@ -3,6 +3,8 @@
 	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	--radius: 0.5rem;
 	--max-width: 1170px;
+	--transition: all 0.3s linear;
+	--fixed-width: 620px;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,8 +54,8 @@ body{
 }
 
 .banner {
-	width: 100px;
-	height: 150px;
+	width: 800px;
+	height: 700px;
 	background-color: white;
 	border: 1px solid #000; /* Add a border for the rounded corners */
 	border-radius: 10px; /* Adjust the radius as needed for the desired corner roundness */
@@ -62,6 +64,47 @@ body{
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+.content-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(73, 166, 233, 0.5);
+	display: grid;
+	place-items: center;
+	transition: var(--transition);
+	/* these are the visibility classes */
+	visibility: hidden;
+	z-index: -10;
+  }
+  .open-content {
+	visibility: visible;
+	z-index: 10;
+  }
+  .content-container {
+	background:white;
+	border-radius: var(--radius);
+	width: 90vw;
+	height: 30vh;
+	max-width: var(--fixed-width);
+	text-align: center;
+	display: grid;
+	place-items: center;
+	position: relative;
+  }
+  .close-btn {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	background: transparent;
+	border-color: transparent;
+	color: darkred;
+	cursor: pointer;
+	transition: var(--transition);
+  }
+  
 
  
 
