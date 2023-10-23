@@ -48,6 +48,9 @@ body{
 
 
 .opening-article{
+	position: fixed;
+  	top: 0;
+  	left: 0;
 	align-content: center;
 	background-color: white;
 }
